@@ -1,4 +1,5 @@
-import math, numpy, pandas, os, glob, pickle
+import math, numpy, pandas, os, glob
+import joblib as jb
 from osgeo import gdal
 from matplotlib import pyplot as plt
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
@@ -6,14 +7,15 @@ from sklearn.svm import SVR, SVC
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
-class F2020ML:
-    def save_model(model, path):
-        with open(path, "wb") as mdl:
-            return pickle.dump(model, mdl)
+def save_model(model, path):
+    with open(path, "wb") as mdl:
+        return joblib.dump(model, mdl)
+    
+def load_model(path):
+    with open(path, "rb") as mdl:
+        return joblib.load(mdl)
 
-    def load_model(path):
-        with open(path, "rb") as mdl:
-            return pickle.load(mdl)
+class F2020ML:
 
     def plot_data(DataY, DataX):
         """Data Visualization 2D 16/01-2019"""
