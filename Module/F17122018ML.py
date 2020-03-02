@@ -1,5 +1,4 @@
-import math, numpy, pandas, os, glob
-import joblib as jb
+import math, numpy, pandas, os, glob, joblib
 from osgeo import gdal
 from matplotlib import pyplot as plt
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
@@ -7,11 +6,11 @@ from sklearn.svm import SVR, SVC
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
-def save_model(model, path):
+def ix_model_save(model, path):
     with open(path, "wb") as mdl:
         return joblib.dump(model, mdl)
-    
-def load_model(path):
+
+def ix_model_load(path):
     with open(path, "rb") as mdl:
         return joblib.load(mdl)
 
