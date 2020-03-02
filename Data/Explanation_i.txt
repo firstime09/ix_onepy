@@ -1,0 +1,10 @@
+## Explanation 28/02-2020
+SVR parm: Kernel=rbf, C=10, epsilon=0.01, gamma=1
+- Try one using NDVI in Line_6_7 data we get the RMSE: 0.178663 and R2: 0.642456 
+	[Max: 1.059053400622893, Min: -0.14655698633285086]
+- Try two without NDVI RMSE: 0.183405 and R2: 0.623228
+	[Max: 0.9310174520793097, Min: -0.2632103740939904]
+
+SVR parm: Kernel=linear, C=10, epsilon=0.01, gamma=0.01
+- Try one using NDVI in Line_6_7 data we get the RMSE: 0.18868 and R2: 0.60122
+- Try two without NDVI RMSE: 0.189296 and R2: 0.5986331
