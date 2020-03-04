@@ -8,6 +8,15 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 class func_raster():
+    
+    def ras2num(data):
+        AOI_2 = data.GetRasterBand(1).ReadAsArray()
+        AOI = AOI_2 > 0
+        img = np.zeros((data.RasterYSize, data.RasterXSize, data.RasterCount),
+                       gdal_array.GDALTypeCodeToNumericTypeCode(data.GetRasterBand(1).DataType))
+        for b in range(img.shape[2]):
+            img[:, :, b] = data.GetRasterBand(b + 1).ReadAsArray()
+        return img
 
     def stack_data(self, input_path, name):
         path = input_path
