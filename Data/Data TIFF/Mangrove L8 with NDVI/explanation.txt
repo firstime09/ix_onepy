@@ -1,0 +1,10 @@
+Data dalam forlder ini merupakan data L8 OLI pada ekosystem mangrove di Sumatera Selatan.
+Data dalam folder ini diperoleh dari situs https://earthexplorer.usgs.gov/
+
+Keterangan Urutan Band:
+- band 1 => Merupakan Band 2 (blue)
+- band 2 => Merupakan Band 3 (green)
+- band 3 => Merupakan Band 4 (red)
+- band 4 => Merupakan Band 5 (NIR)
+- band 5 => Merupakan Band 6 (SWIR 1)
+- band 7 => Merupakan Band NDVI ((Nir-red / Nir+red))
