@@ -10,8 +10,6 @@ from sklearn.model_selection import train_test_split
 class func_raster():
     
     def ras2num(data):
-        AOI_2 = data.GetRasterBand(1).ReadAsArray()
-        AOI = AOI_2 > 0
         img = np.zeros((data.RasterYSize, data.RasterXSize, data.RasterCount),
                        gdal_array.GDALTypeCodeToNumericTypeCode(data.GetRasterBand(1).DataType))
         for b in range(img.shape[2]):
@@ -30,7 +28,7 @@ class func_raster():
 
     def saved_data_TIF(out_path1, pred_model, name, ras):
         ## Make data prediction to TIF file
-        saved_data = (name + "F2020.TIF")
+        saved_data = (name + "ifapp.TIF")
         output_path = (out_path1 + saved_data)
         # raster = in_path1 + '/CIDANAU_STACK_13052019.tif'
         raster = ras
