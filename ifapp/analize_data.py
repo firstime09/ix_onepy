@@ -7,7 +7,7 @@ from sklearn.svm import SVR, SVC
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
-class func_raster():
+class ifapp_raster():
     
     def ras2num(data):
         img = np.zeros((data.RasterYSize, data.RasterXSize, data.RasterCount),
@@ -71,7 +71,7 @@ class func_raster():
             read_dem.append(band_dem.GetRasterBand(1).ReadAsArray().astype(float))
         return (my_dict, read_dem)
     
-class func_Mlearn():
+class ifapp_Mlearn():
     
     def Model_RMSE(actual, predic):
         rmse = np.sqrt(((actual - predic)**2).mean())
