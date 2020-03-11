@@ -1,4 +1,4 @@
-import glob, os
+import glob, os, rasterio
 import numpy as np
 import matplotlib.pyplot as plt
 from osgeo import gdal, gdal_array
@@ -8,6 +8,18 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 class ifapp_raster():
+    
+    def ras_savi(nir, red, l):
+        nir = nir.read(1).astype('f4')
+        red = red.read(1).astype('f4')
+        savi = (((nir - red)/(nir + red + l)) * (1 + l))
+        return savi
+    
+    def ras_ndvi(nir, red):
+        nir = nir.read(1).astype('f4')
+        red = red.read(1).astype('f4')
+        ndvi = (nir - red)/(nir + red)
+        return ndvi
     
     def ras2num(data):
         img = np.zeros((data.RasterYSize, data.RasterXSize, data.RasterCount),
@@ -26,14 +38,14 @@ class ifapp_raster():
         # outData = output_path + stack_layer
         return stack_layer
 
-    def saved_data_TIF(out_path1, pred_model, name, ras):
+    def saved_data_TIF(outDir, data, name, ras):
         ## Make data prediction to TIF file
         saved_data = (name + "ifapp.TIF")
-        output_path = (out_path1 + saved_data)
+        output_path = (outDir + saved_data)
         # raster = in_path1 + '/CIDANAU_STACK_13052019.tif'
         raster = ras
         in_path = gdal.Open(raster)
-        in_array = pred_model
+        in_array = data
         ## global proj, geotrans, row, col
         proj = in_path.GetProjection()
         geotrans = in_path.GetGeoTransform()
