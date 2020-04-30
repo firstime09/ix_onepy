@@ -1,0 +1,48 @@
+<VRTDataset rasterXSize="732" rasterYSize="598">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["WGS 84 / UTM zone 48S",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",105],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",10000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32748"]]</SRS>
+  <GeoTransform>  5.9434500000000000e+05,  3.0000000000000000e+01,  0.0000000000000000e+00,  9.3227050000000000e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-3.4e+38</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">Band_2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="732" RasterYSize="598" DataType="Float32" BlockXSize="732" BlockYSize="2" />
+      <SrcRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <DstRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <NODATA>-3.4e+38</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Float32" band="2">
+    <NoDataValue>-3.4e+38</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">Band_3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="732" RasterYSize="598" DataType="Float32" BlockXSize="732" BlockYSize="2" />
+      <SrcRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <DstRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <NODATA>-3.4e+38</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Float32" band="3">
+    <NoDataValue>-3.4e+38</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">Band_4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="732" RasterYSize="598" DataType="Float32" BlockXSize="732" BlockYSize="2" />
+      <SrcRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <DstRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <NODATA>-3.4e+38</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Float32" band="4">
+    <NoDataValue>-3.4e+38</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">Band_5.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="732" RasterYSize="598" DataType="Float32" BlockXSize="732" BlockYSize="2" />
+      <SrcRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <DstRect xOff="0" yOff="0" xSize="732" ySize="598" />
+      <NODATA>-3.4e+38</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
